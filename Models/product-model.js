@@ -1,6 +1,6 @@
 
 const mongoose = require("mongoose");
-
+require("../config/mongoose-connection")
 // connect to db previously
 
 const productScheme = mongoose.Schema({
@@ -16,4 +16,4 @@ const productScheme = mongoose.Schema({
     textColor:String
 })
 
-module.export= mongoose.model("product", productScheme);
+module.exports= mongoose.model("product", productScheme);

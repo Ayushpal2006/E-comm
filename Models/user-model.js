@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+require("../config/mongoose-connection")
 
 const userScheme = mongoose.Schema({
     fullName:{
@@ -12,7 +12,6 @@ const userScheme = mongoose.Schema({
         type:Array,
         default:[]
     },
-    isAdmin:Boolean,
     order:{
         type:Array,
         default:[]
@@ -21,4 +20,4 @@ const userScheme = mongoose.Schema({
     picture:String
 })
 
-module.export= mongoose.model("users", userScheme);
+module.exports= mongoose.model("users", userScheme);
